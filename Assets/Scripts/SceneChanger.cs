@@ -52,6 +52,7 @@ public class SceneChanger : MonoBehaviour
     public void SecondLevel(bool isActive)
     {
         SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void ExitGame()
