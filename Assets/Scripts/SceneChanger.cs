@@ -49,6 +49,11 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 
+    public void SecondLevel(bool isActive)
+    {
+        SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+    }
+
     public void ExitGame()
     {
         Application.Quit();
