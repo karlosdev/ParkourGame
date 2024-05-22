@@ -20,9 +20,16 @@ public class SceneChanger : MonoBehaviour
         
     }
 
-    public void StartGame()
+    public void StartMap1()
     {
         SceneManager.LoadScene("MainMap", LoadSceneMode.Single);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void StartMap2()
+    {
+        SceneManager.LoadScene("Level2", LoadSceneMode.Single);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
