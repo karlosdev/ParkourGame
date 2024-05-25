@@ -10,7 +10,7 @@ public class LookSensitivitySlider : MonoBehaviour
     public ThirdPersonController thirdPersonController;
     void Start()
     {
-        SliderCzulosc.value = 0.5f;
+        SliderCzulosc.value = 1f;
         if (SliderCzulosc == null || thirdPersonController == null)
         {
             Debug.LogError("Slider lub ThirdPersonController nie jest przypisany!");
