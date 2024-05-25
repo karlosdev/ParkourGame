@@ -30,7 +30,6 @@ public class BringSettings : MonoBehaviour
     {
         setting.SetActive(true);
         issettingactive = true;
-        this.GetComponent<MouseLook>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -39,7 +38,6 @@ public class BringSettings : MonoBehaviour
     {
         setting.SetActive(false);
         issettingactive = false;
-        this.GetComponent<MouseLook>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
