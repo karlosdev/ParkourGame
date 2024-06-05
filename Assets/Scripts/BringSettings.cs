@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BringSettings : MonoBehaviour
 {
@@ -57,6 +58,18 @@ public class BringSettings : MonoBehaviour
     {
         Menu.SetActive(true);
         Options.SetActive(false);
+    }
+
+    public void RestartFirstLevel(bool isActive)
+    {
+        SceneManager.LoadScene("MainMap", LoadSceneMode.Single);
+        Resume();
+    }
+
+    public void RestartSecondLevel(bool isActive)
+    {
+        SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+        Resume();
     }
 
     public void ExitGame()
