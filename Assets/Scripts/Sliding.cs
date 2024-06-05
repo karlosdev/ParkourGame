@@ -25,7 +25,6 @@ public class Sliding : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
     }
 
     private void IsSliding()
@@ -35,13 +34,12 @@ public class Sliding : MonoBehaviour
             if (Slide == true)
             {
                 Slide = false;
-                anim.SetBool("Slide", false);
             }
 
             else
             {
                 Slide = true;
-                anim.SetBool("Slide", true);
+                GetComponent<Animator>().SetTrigger("Slide");
             }
         }
     }
