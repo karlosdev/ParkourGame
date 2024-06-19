@@ -4,57 +4,44 @@ using UnityEngine;
 
 public class Sliding : MonoBehaviour
 {
-    private CharacterController controller;
+    private CharacterController playerController;
     private Animator anim;
-    private Vector3 SlidePosition;
-    private bool Slide = false;
+    private Rigidbody playerRigidbody;
+    private GameObject PlayerObject;
+
+    private float pushForce = 5f;
+    public float reducedHeight = 0.8f;
+    public float originalHeight = 1.8f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerController = GetComponent<CharacterController>();
+        //originalHeight = playerController.height;
+        playerRigidbody = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        IsSliding();
-    }
-
-    private void Awake()
-    {
-        controller = GetComponent<CharacterController>();
-    }
-
-    private void IsSliding()
-    {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            if (Slide == true)
-            {
-                Slide = false;
-            }
-
-            else
-            {
-                Slide = true;
-                GetComponent<Animator>().SetTrigger("Slide");
-            }
+            StartCoroutine(PerformSlide());
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            playerController.height = originalHeight;
         }
     }
 
-    IEnumerator LerpVault(Vector3 targetPosition, float duration)
+    IEnumerator PerformSlide()
     {
-        float time = 0;
-        Vector3 startPosition = transform.position;
-
-        while (time < duration)
-        {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
-            time += Time.deltaTime;
-            yield return null;
-        }
-        transform.position = targetPosition;
+        GetComponent<Animator>().SetTrigger("Slide");
+        playerController.height = reducedHeight;
+        yield return new WaitForSeconds(1);
+        playerController.height = originalHeight;
+        
     }
 }
