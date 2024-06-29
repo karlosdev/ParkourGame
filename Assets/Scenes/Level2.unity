@@ -1190,7 +1190,7 @@ Transform:
   m_GameObject: {fileID: 69298030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.31653, y: -1.5793533, z: -11.726627}
+  m_LocalPosition: {x: -42.316525, y: -1.5793533, z: -11.726635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4812,7 +4812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &283392210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7724,8 +7724,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427020492}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.6867365, z: -0, w: 0.72690654}
-  m_LocalPosition: {x: 51.2, y: 5.39, z: 54.28}
+  m_LocalRotation: {x: -0, y: -0.9348265, z: -0, w: 0.3551049}
+  m_LocalPosition: {x: 22.99, y: 5.39, z: 38.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7733,7 +7733,7 @@ Transform:
   - {fileID: 69298031}
   - {fileID: 2014714391}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 633.255, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 581.6, z: 0}
 --- !u!1001 &432810194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10174,14 +10174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Spacja - Skok
-
-    Shift - Sprint
-
-    E - Wspinaczka
-
-
-    Powodzenia!'
+  m_text: "Spacja - Skok\nShift - Sprint\nE - Wspinaczka\nC - \u015Alizg\n\nPowodzenia!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -40706,7 +40699,7 @@ PrefabInstance:
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.31653
+      value: -42.316525
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
@@ -40716,7 +40709,7 @@ PrefabInstance:
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.726627
+      value: -11.726635
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
